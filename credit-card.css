@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f5f7fa;
+}
+card-container{
+  perspective: 1000px;
+}
+.card{
+  width: 360px;
+  height: 220px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  cursor: pointer;
+}
+.card.flipped{
+  transform: rotateY(180deg);
+}
+.card-face{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  padding: 0 20px;
+  color: #fff;
+}
+.card-front{
+  background: linear-gradient(135deg, #0f3c91, #1a73e8);
+  padding: 10px 20px;
+  
+}
+.card-back{
+  background: linear-gradient(135deg, #1f1f1f, #444);
+  transform: rotateY(180deg);
+  padding: 20px;
+}
+.visa-logo{
+  position: absolute;
+  top: 14px;
+  right: 20px;
+  font-weight: 700;
+}
+.chip img{
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+
+.card-number{
+  margin: 30px 0;
+  letter-spacing: 3px;
+  font-size: 15px;
+}
+.card-details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+.card-name{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.card-info{
+  text-align: right;
+  font-size: 13px;
+}
+.magnetic-strip{
+  background: #000;
+  height: 30px;
+  margin-top: 30px;
+}
+.white-strip{
+  background: #fff;
+  height: 30px;
+  margin: 20px 0;
+
+}
+.cvv-box{
+  text-align: right;
+  margin-bottom: 20px;
+}
+.cvv{
+  font-size: 13px;
+}
+.number{
+  background: #fff;
+  font-weight: bold;
+  padding: 0 7px;
+  border-radius: 2px;
+  color: #000;
+}
+.info-text{
+  font-size: 12px;
+  text-align: center;
+}
+
+
